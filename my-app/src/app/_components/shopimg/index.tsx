@@ -11,7 +11,6 @@ export default function Shopimg() {
       }}
     >
       <div className="absolute inset-0  opacity-30 ]"></div>{" "}
-      {/* Arxa fon şəffaflığı üçün əlavə */}
       <div className="container relative mx-auto flex flex-col items-center md:items-start text-white text-center md:text-left px-4 md:px-8 z-10">
         <h1 className="text-5xl font-medium text-black">Shop</h1>
         <nav className="mt-4">

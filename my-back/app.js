@@ -4,7 +4,7 @@ const connectDB = require('./db/ConnectDB');
 const cors = require("cors")
 const authRouter = require('./routers/authRouter');
 const productRoutes = require('./routers/productRouters');
-
+// const connectDB = require('./db/materialDB');
 const corsOptions = {
     credentials: true,
     origin: ['http://localhost:3000']
