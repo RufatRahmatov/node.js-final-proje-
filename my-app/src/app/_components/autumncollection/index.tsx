@@ -16,13 +16,13 @@ interface Product {
   status?: string;
 }
 
-const TrendyCollection: React.FC = () => {
+const Autumncolletion: React.FC = () => {
   const [products, setProducts] = useState<Product[]>([]);
   console.log(products, "products");
+
   useEffect(() => {
     axios
       .get("http://localhost:3001/api/products")
-
       .then((response) => {
         setProducts(response.data);
       })
@@ -30,9 +30,8 @@ const TrendyCollection: React.FC = () => {
   }, []);
 
   return (
-    <div className="container mx-auto px-4 py-12">
+    <div className="container mx-auto px-4 py-12 mt-12">
       <div>
-        {" "}
         <h2 className="text-center text-4xl font-semibold mb-4">
           Trendy Collection
         </h2>
@@ -42,7 +41,7 @@ const TrendyCollection: React.FC = () => {
       </div>
 
       <Swiper spaceBetween={30} slidesPerView={4} navigation loop>
-        {products?.map((product, index) => (
+        {products?.map((product) => (
           <SwiperSlide key={product._id}>
             <div className="group relative border rounded-lg p-4 bg-white shadow-md overflow-hidden">
               {/* Status Labels */}
@@ -52,34 +51,19 @@ const TrendyCollection: React.FC = () => {
                 </div>
               )}
 
-              {index === 2 ? (
-                <div className="relative h-64">
-                  <iframe
-                    className="absolute inset-0 w-full h-full"
-                    src="https://www.youtube.com/embed/ScMzIvxBSi4"
-                    title="YouTube video player"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
-                </div>
-              ) : (
-                <>
-                  {/* Product Image */}
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    className="w-full h-64 object-contain group-hover:hidden"
-                  />
-                  {/* Hover Image */}
-                  {product.hoverImage && (
-                    <img
-                      src={product.hoverImage}
-                      alt={product.name}
-                      className="w-full h-64 object-contain hidden group-hover:block"
-                    />
-                  )}
-                </>
+              {/* Product Image */}
+              <img
+                src={product.image}
+                alt={product.name}
+                className="w-full h-64 object-contain group-hover:hidden"
+              />
+              {/* Hover Image */}
+              {product.hoverImage && (
+                <img
+                  src={product.hoverImage}
+                  alt={product.name}
+                  className="w-full h-64 object-contain hidden group-hover:block"
+                />
               )}
 
               {/* Hover Efekti ile Gelen İkonlar */}
@@ -114,4 +98,4 @@ const TrendyCollection: React.FC = () => {
   );
 };
 
-export default TrendyCollection;
+export default Autumncolletion;

@@ -83,7 +83,7 @@ const Header: FC = () => {
 
           <li className="group relative flex items-center">
             <a
-              href="#"
+              href="/shop"
               className="text-sm uppercase font-semibold group-hover:text-gray-700"
             >
               Shop
