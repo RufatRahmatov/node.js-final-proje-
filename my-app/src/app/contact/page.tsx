@@ -1,21 +1,19 @@
-"use client";
-
 import React from "react";
 import Layouts from "../_layouts/layout";
-import Shopimg from "../_components/shopimg";
-import Shopdata from "../_components/shopdata";
+import ContactMap from "../_components/contactmap";
+import ContactUs from "../_components/contactus";
 import Newletter from "../_components/newletter";
 
-const Shop = () => {
+const Contact = () => {
   return (
     <Layouts>
       <main>
-        <Shopimg />
-        <Shopdata />
+        <ContactMap />
+        <ContactUs />
         <Newletter />
       </main>
     </Layouts>
   );
 };
 
-export default Shop;
+export default Contact;

@@ -12,8 +12,7 @@ const Shopnow = () => {
 
   return (
     <div className="flex flex-col md:flex-row flex-wrap justify-center items-center gap-8 py-12 px-4 w-[1570px] ml-[170px]">
-      {/* First Card */}
-      <div className="relative group w-full md:w-[48%] overflow-hidden rounded-lg shadow-lg">
+      <div className="relative group w-full md:w-[48%] overflow-hidden  shadow-lg">
         <div className="overflow-hidden">
           <img
             src="https://demo-alukas.myshopify.com/cdn/shop/files/alk1_4.jpg?v=1710149492&width=1340"
@@ -39,8 +38,7 @@ const Shopnow = () => {
         </div>
       </div>
 
-      {/* Second Card */}
-      <div className="relative group w-full md:w-[48%] overflow-hidden rounded-lg shadow-lg">
+      <div className="relative group w-full md:w-[48%] overflow-hidden  shadow-lg">
         <div className="overflow-hidden">
           <img
             src="https://demo-alukas.myshopify.com/cdn/shop/files/alk1_5.jpg?v=1710149492&width=1340"

@@ -44,8 +44,7 @@ const TrendyCollection: React.FC = () => {
       <Swiper spaceBetween={30} slidesPerView={4} navigation loop>
         {products?.map((product, index) => (
           <SwiperSlide key={product._id}>
-            <div className="group relative border rounded-lg p-4 bg-white shadow-md overflow-hidden">
-              {/* Status Labels */}
+            <div className="group relative bg-white  overflow-hidden mt-6">
               {product.status && (
                 <div className="absolute top-0 left-0 bg-yellow-500 text-white text-xs px-2 py-1 rounded-br-lg">
                   {product.status.toUpperCase()}
@@ -65,13 +64,12 @@ const TrendyCollection: React.FC = () => {
                 </div>
               ) : (
                 <>
-                  {/* Product Image */}
                   <img
                     src={product.image}
                     alt={product.name}
                     className="w-full h-64 object-contain group-hover:hidden"
                   />
-                  {/* Hover Image */}
+
                   {product.hoverImage && (
                     <img
                       src={product.hoverImage}
@@ -82,19 +80,17 @@ const TrendyCollection: React.FC = () => {
                 </>
               )}
 
-              {/* Hover Efekti ile Gelen İkonlar */}
               <div className="absolute top-4 right-4 flex flex-col space-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform group-hover:translate-x-0 group-hover:translate-y-0">
                 <FaHeart className="text-gray-500 hover:text-black transform transition duration-300 hover:scale-125" />
                 <FaSync className="text-gray-500 hover:text-black transform transition duration-300 hover:scale-125" />
                 <FaSearch className="text-gray-500 hover:text-black transform transition duration-300 hover:scale-125" />
               </div>
 
-              {/* Product Info */}
               <div className="mt-4 text-center">
                 <h3 className="text-sm font-semibold text-gray-700 mb-1">
                   {product.name}
                 </h3>
-                <p className="text-lg font-bold mb-1">
+                <p className="text-lg font-medium mb-1">
                   ${product.price}
                   {product.discount && (
                     <span className="text-sm text-red-500 line-through ml-2">
@@ -102,7 +98,7 @@ const TrendyCollection: React.FC = () => {
                     </span>
                   )}
                 </p>
-                <button className="mt-4 px-4 py-2 bg-black text-white font-semibold rounded-md transition-all duration-300 hover:bg-white hover:text-black border-black border-2">
+                <button className="relative  text-black font-semibold transition-all duration-300 hover:bg-white hover:text-black after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:w-0 after:h-[2px] after:bg-black after:transition-all after:duration-300 after:transform after:-translate-x-1/2 hover:after:w-full">
                   ADD TO CART
                 </button>
               </div>

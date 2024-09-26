@@ -43,7 +43,7 @@ const Featureproduct: React.FC = () => {
       <Swiper spaceBetween={30} slidesPerView={4} navigation loop>
         {products?.map((product) => (
           <SwiperSlide key={product._id}>
-            <div className="group relative border rounded-lg p-4 bg-white shadow-md overflow-hidden">
+            <div className="group relative  p-4 bg-white  overflow-hidden mt-4">
               {product.status && (
                 <div className="absolute top-0 left-0 bg-yellow-500 text-white text-xs px-2 py-1 rounded-br-lg">
                   {product.status.toUpperCase()}
@@ -74,7 +74,7 @@ const Featureproduct: React.FC = () => {
                 <h3 className="text-sm font-semibold text-gray-700 mb-1">
                   {product.name}
                 </h3>
-                <p className="text-lg font-bold mb-1">
+                <p className="text-lg font-medium mb-1">
                   ${product.price}
                   {product.discount && (
                     <span className="text-sm text-red-500 line-through ml-2">
@@ -82,7 +82,7 @@ const Featureproduct: React.FC = () => {
                     </span>
                   )}
                 </p>
-                <button className="mt-4 px-4 py-2 bg-black text-white font-semibold rounded-md transition-all duration-300 hover:bg-white hover:text-black border-black border-2">
+                <button className="relative  text-black font-semibold transition-all duration-300 hover:bg-white hover:text-black after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:w-0 after:h-[2px] after:bg-black after:transition-all after:duration-300 after:transform after:-translate-x-1/2 hover:after:w-full">
                   ADD TO CART
                 </button>
               </div>
